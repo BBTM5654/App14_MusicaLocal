@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#F8F2FC" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Mi música ♫" android:textColor="#7651A0" android:textSize="28sp" android:textStyle="bold"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="by Braulio Torres" android:textColor="#A58BB6" android:textSize="13sp" android:layout_marginBottom="20dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/tarjeta" android:padding="16dp" android:orientation="vertical">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Carpeta de música" android:textColor="#7651A0" android:textStyle="bold"/>
+            <Spinner android:id="@+id/spinnerCarpetas" android:layout_width="match_parent"
+                android:layout_height="52dp" android:contentDescription="Elegir carpeta de música"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="18dp"
+            android:layout_marginTop="16dp" android:background="@drawable/tarjeta">
+            <TextView android:layout_width="132dp" android:layout_height="132dp"
+                android:gravity="center" android:background="@drawable/portada"
+                android:text="♫" android:textSize="75sp" android:textColor="#B575A5"/>
+            <TextView android:id="@+id/txtCancion" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Selecciona una canción"
+                android:textColor="#7651A0" android:textSize="18sp" android:textStyle="bold"
+                android:gravity="center" android:layout_marginTop="15dp" android:maxLines="2"/>
+            <SeekBar android:id="@+id/seekProgreso" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:progressTint="#E8A0AE"
+                android:thumbTint="#D78B9B" android:layout_marginTop="12dp"/>
+            <TextView android:id="@+id/txtTiempo" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="0:00 / 0:00"
+                android:gravity="center" android:textColor="#9A84A5"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:orientation="horizontal" android:layout_marginTop="14dp">
+                <Button android:id="@+id/btnAnterior" android:layout_width="70dp"
+                    android:layout_height="60dp" android:text="⏮" android:textSize="25sp"
+                    android:textColor="#7651A0" android:backgroundTint="#E6D4F5"
+                    android:contentDescription="Canción anterior"/>
+                <Button android:id="@+id/btnPlay" android:layout_width="85dp"
+                    android:layout_height="65dp" android:text="▶" android:textSize="28sp"
+                    android:textColor="#FFFFFF" android:backgroundTint="#E8A0AE"
+                    android:layout_marginHorizontal="10dp" android:contentDescription="Reproducir o pausar"/>
+                <Button android:id="@+id/btnSiguiente" android:layout_width="70dp"
+                    android:layout_height="60dp" android:text="⏭" android:textSize="25sp"
+                    android:textColor="#7651A0" android:backgroundTint="#E6D4F5"
+                    android:contentDescription="Siguiente canción"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp" android:layout_marginTop="16dp"
+            android:background="@drawable/tarjeta">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="Canciones encontradas" android:textColor="#7651A0"
+                android:textSize="18sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/txtCantidad" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="0 canciones" android:textColor="#A18EA8"/>
+            <ListView android:id="@+id/listaCanciones" android:layout_width="match_parent"
+                android:layout_height="280dp" android:divider="#F1DFEB" android:dividerHeight="1dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
