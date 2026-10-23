@@ -25,7 +25,12 @@ jobs:
           java-version: '17'
       - name: Preparar Android SDK
         run: |
-          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -mindepth 2 -maxdepth 2 -name sdkmanager | sort -V | tail -n 1)"
+          SDKMANAGER="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager | sort -V | tail -n 1)"
+          if [ -z "$SDKMANAGER" ]; then
+            echo "No se encontró sdkmanager en $ANDROID_HOME/cmdline-tools"
+            find "$ANDROID_HOME/cmdline-tools" -maxdepth 4 -type f | head -n 50
+            exit 1
+          fi
           echo "Usando sdkmanager: $SDKMANAGER"
           yes | "$SDKMANAGER" --licenses || true
           "$SDKMANAGER" --install "platform-tools" "platforms;android-35" "build-tools;35.0.0"
