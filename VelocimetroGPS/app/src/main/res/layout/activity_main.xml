@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true" android:background="#151A2A">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Velocímetro GPS" android:textColor="#E0D5FF" android:textSize="26sp" android:textStyle="bold" android:gravity="center"/>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="by Braulio Torres" android:textColor="#B8A6DD" android:textSize="13sp" android:gravity="center"/>
+<com.braulio.velocimetrogps.VelocimetroView android:id="@+id/velocimetro" android:layout_width="match_parent" android:layout_height="320dp" android:contentDescription="Velocímetro con aguja de velocidad"/>
+<TextView android:id="@+id/txtVelocidad" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0.0 km/h" android:textSize="28sp" android:textStyle="bold" android:textColor="#FFFFFF" android:gravity="center"/>
+<TextView android:id="@+id/txtGPS" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GPS: esperando señal..." android:textColor="#C4B5FD" android:gravity="center" android:layout_marginTop="12dp"/>
+<TextView android:id="@+id/txtPrecision" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Precisión: --" android:textColor="#A7F3D0" android:gravity="center"/>
+<Button android:id="@+id/btnIniciar" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Iniciar velocímetro" android:layout_marginTop="16dp"/>
+<Button android:id="@+id/btnDetener" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Detener" android:enabled="false"/>
+<TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lecturas descartadas" android:textColor="#FF83AC" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="24dp"/>
+<TextView android:id="@+id/txtContador" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Total descartadas: 0" android:textColor="#C4B5FD"/>
+<TextView android:id="@+id/txtDescartados" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Todavía no hay lecturas descartadas." android:textColor="#FFFFFF" android:textSize="14sp" android:padding="14dp" android:background="#29314A" android:layout_marginTop="10dp"/>
+</LinearLayout></ScrollView>
